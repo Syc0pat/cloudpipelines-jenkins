@@ -2,9 +2,9 @@
 #   http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/
 #   https://github.com/jenkinsci/docker#preinstalling-plugins
 #   https://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose
-#FROM jenkins/jenkins:2.178-jdk11
+FROM jenkins/jenkins:2.178-jdk11
 
-FROM jenkins/jenkins:lts-jdk11
+#FROM jenkins/jenkins:lts-jdk11
 
 LABEL maintainer "Marcin Grzejszczak <mgrzejszczak@pivotal.io>"
 
@@ -95,4 +95,4 @@ RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" | tee /etc/
 #    jq -r '.plugins[] | .shortName +":"+ .version' | sort > plugins.txt
 #
 # You have to install the plugins manually
-# RUN install-plugins.sh $( paste -sd' ' /usr/share/jenkins/plugins.txt )
+RUN install-plugins.sh $( paste -sd' ' /usr/share/jenkins/plugins.txt )

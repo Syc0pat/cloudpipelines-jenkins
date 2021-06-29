@@ -2,9 +2,11 @@
 #   http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/
 #   https://github.com/jenkinsci/docker#preinstalling-plugins
 #   https://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose
-FROM jenkins/jenkins:2.178-jdk11
-
+#FROM jenkins/jenkins:2.178-jdk11
 #FROM jenkins/jenkins:lts-jdk11
+#FROM jenkins/jenkins:2.289.1-lts-jdk11
+#FROM jenkins/jenkins:2.277.4-jdk11
+FROM jenkins/jenkins:2.222.4-jdk11
 
 LABEL maintainer "Marcin Grzejszczak <mgrzejszczak@pivotal.io>"
 
